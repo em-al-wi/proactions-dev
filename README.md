@@ -27,7 +27,7 @@ ProActions is a tool that allows you to define automated workflows and processes
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone or Download the Repository
 
@@ -94,7 +94,7 @@ For Windows users, a batch file (`start-dev-server.bat`) is provided for conveni
 
 ---
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -123,7 +123,7 @@ To validate your YAML configuration:
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Official ProActions Documentation](https://confluence.eidosmedia.com/display/TEM/Swing+ProActions+Configuration)
 - [ProActions Step Library](https://confluence.eidosmedia.com/display/TEM/Swing+ProActions+AI-Kit+Library)
