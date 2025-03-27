@@ -1,0 +1,8 @@
+AI_KIT:
+  SERVICES:
+    HUB:
+      endpoint: "{BASE_URL}/swing/proactions"
+
+  TEMPLATES: []
+
+  SECTIONS: []

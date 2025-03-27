@@ -1,0 +1,11 @@
+{
+  "name": "proactions-dev",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "http-server -p 8083 -a 0.0.0.0 --cors -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
