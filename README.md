@@ -76,9 +76,9 @@ For Windows users, a batch file (`start-dev-server.bat`) is provided for conveni
 
 ### 4. Edit Your Configuration File
 
-1. Open `public/SysConfig/pro-actions.ai-kit.yaml` in your preferred text editor (e.g., Visual Studio Code).
-2. Make changes to the configuration as needed.
-3. Save your changes.
+1. Navigate to the `public/SysConfig` directory.
+2. Create a new file named `pro-actions.ai-kit.yaml`.
+3. Use the template provided in the same directory (`pro-actions.ai-kit.yaml.template`) as a starting point.
 
 ---
 

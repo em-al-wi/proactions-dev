@@ -5,4 +5,16 @@ AI_KIT:
 
   TEMPLATES: []
 
-  SECTIONS: []
+  SECTIONS:
+  - section: Hello_World
+    actions:
+    - title: Test ProAction
+      flow:
+      - step: PROMPT
+        promptText: "This is a label"
+      - step: SHOW_RESPONSE
+
+
+# start your local server
+# start your swing app or reload (F5) if alread opened
+# check proactions (Ctrl+k)
