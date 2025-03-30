@@ -1,6 +1,8 @@
 # ProActions dev settings
-**/*.ai-kit.yaml
+public/**/*.yaml
 public/SysConfig/**/*.yaml
+
+examples/
 
 # Node.js dependencies
 node_modules/
@@ -27,7 +29,6 @@ out/
 
 # IDE and editor specific files
 .idea/
-.vscode/
 *.sublime-project
 *.sublime-workspace
 .project

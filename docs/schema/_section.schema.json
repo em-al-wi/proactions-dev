@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProActions Section Schema",
+  "type": "object",
+  "description": "A logical section containing grouped actions",
+  "required": [
+    "section",
+    "actions"
+  ],
+  "properties": {
+    "section": {
+      "type": "string",
+      "description": "Section identifier"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category for grouping sections"
+    },
+    "hidden": {
+      "type": "boolean",
+      "description": "Whether this section is hidden from UI"
+    },
+    "app": {
+      "type": "string",
+      "enum": [
+        "prime",
+        "swing",
+        "standalone"
+      ],
+      "description": "Application where this section applies"
+    },
+    "context": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "all",
+            "report",
+            "story",
+            "dwp",
+            "dashboard"
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "all",
+              "report",
+              "story",
+              "dwp",
+              "dashboard"
+            ]
+          }
+        }
+      ],
+      "description": "Document context where this section appears"
+    },
+    "keywords": {
+      "type": "string",
+      "description": "Search keywords for finding actions"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon html for this section"
+    },
+    "actions": {
+      "type": "array",
+      "description": "List of actions in this section",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "flow"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the action"
+          },
+          "title": {
+            "type": "string",
+            "description": "Display title for the action"
+          },
+          "category": {
+            "type": "string",
+            "description": "Category for sub-grouping actions"
+          },
+          "context": {
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "all",
+                  "report",
+                  "story",
+                  "dwp",
+                  "dashboard"
+                ]
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "all",
+                    "report",
+                    "story",
+                    "dwp",
+                    "dashboard"
+                  ]
+                }
+              }
+            ],
+            "description": "Document context where this action appears"
+          },
+          "keywords": {
+            "type": "string",
+            "description": "Search keywords for finding this action"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icon HTML for the action"
+          },
+          "flow": {
+            "type": "array",
+            "description": "List of steps to execute",
+            "items": {
+              "$ref": "./_step.schema.json"
+            }
+          },
+          "onError": {
+            "type": "array",
+            "description": "Steps to execute if an error occurs",
+            "items": {
+              "$ref": "./_step.schema.json"
+            }
+          },
+          "hidden": {
+            "type": "boolean",
+            "description": "Whether this action is hidden from UI"
+          },
+          "isAvailable": {
+            "type": "string",
+            "description": "Condition for when action is available"
+          },
+          "panelContext": {
+            "type": "array",
+            "description": "Context specifications for panel display",
+            "items": {
+              "type": "object",
+              "properties": {
+                "forXPath": {
+                  "type": "string",
+                  "description": "XPath for context matching"
+                },
+                "forTextSelection": {
+                  "type": "boolean",
+                  "description": "Applies to text selections"
+                },
+                "forElement": {
+                  "type": "string",
+                  "description": "Element type for matching"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
