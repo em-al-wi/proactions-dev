@@ -3,7 +3,7 @@ AI_KIT:
     HUB:
       endpoint: "{BASE_URL}/swing/proactions"
 
-  TEMPLATES: []
+  TEMPLATES: {}
 
   SECTIONS:
   - section: Hello_World
