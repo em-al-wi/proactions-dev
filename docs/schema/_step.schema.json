@@ -204,6 +204,18 @@
     },
     {
       "$ref": "#/definitions/steps/IMAGE_PICKER"
+    },
+    {
+      "$ref": "#/definitions/steps/HUB_YOUTUBE_AUTH_INIT"
+    },
+    {
+      "$ref": "#/definitions/steps/HUB_YOUTUBE_AUTH_LOGOUT"
+    },
+    {
+      "$ref": "#/definitions/steps/HUB_YOUTUBE_AUTH_STATUS"
+    },
+    {
+      "$ref": "#/definitions/steps/HUB_YOUTUBE_UPLOAD"
     }
   ],
   "definitions": {
@@ -2752,6 +2764,102 @@
           "promptText": {
             "type": "string",
             "description": "Text to display in the image selection dialog"
+          }
+        }
+      },
+      "HUB_YOUTUBE_AUTH_INIT": {
+        "type": "object",
+        "description": "Initiate YouTube authentication process",
+        "required": [
+          "step",
+          "account"
+        ],
+        "properties": {
+          "step": {
+            "type": "string",
+            "enum": [
+              "HUB_YOUTUBE_AUTH_INIT"
+            ],
+            "description": "The HUB_YOUTUBE_AUTH_INIT step to start the authentication process for YouTube"
+          },
+          "account": {
+            "type": "string",
+            "description": "The account to be used for authentication - see configuration in ProActions Hub"
+          },
+          "omitOpenAuth": {
+            "type": "boolean",
+            "description": "Prevent opening the authentication URL in a new tab"
+          }
+        }
+      },
+      "HUB_YOUTUBE_AUTH_LOGOUT": {
+        "type": "object",
+        "description": "Logout from YouTube",
+        "required": [
+          "step",
+          "account"
+        ],
+        "properties": {
+          "step": {
+            "type": "string",
+            "enum": [
+              "HUB_YOUTUBE_AUTH_LOGOUT"
+            ],
+            "description": "The HUB_YOUTUBE_AUTH_LOGOUT step to logout an account from YouTube"
+          },
+          "account": {
+            "type": "string",
+            "description": "The account to be used for logout - see configuration in ProActions Hub"
+          }
+        }
+      },
+      "HUB_YOUTUBE_AUTH_STATUS": {
+        "type": "object",
+        "description": "Returns the status of your YouTube authentication",
+        "required": [
+          "step",
+          "account"
+        ],
+        "properties": {
+          "step": {
+            "type": "string",
+            "enum": [
+              "HUB_YOUTUBE_AUTH_STATUS"
+            ],
+            "description": "The HUB_YOUTUBE_AUTH_STATUS step to check the authentication status"
+          },
+          "account": {
+            "type": "string",
+            "description": "The account to be used - see configuration in ProActions Hub"
+          }
+        }
+      },
+      "HUB_YOUTUBE_UPLOAD": {
+        "type": "object",
+        "description": "Upload",
+        "required": [
+          "step",
+          "account"
+        ],
+        "properties": {
+          "step": {
+            "type": "string",
+            "enum": [
+              "HUB_YOUTUBE_UPLOAD"
+            ],
+            "description": "The HUB_YOUTUBE_UPLOAD step to upload a video to YouTube"
+          },
+          "account": {
+            "type": "string",
+            "description": "The account to be used - see configuration in ProActions Hub"
+          },
+          "updateProgress": {
+            "type": "boolean",
+            "description": "Update the progress bar if it exists - see SHOW_PROGRESS"
+          },
+          "additionalMetadata": {
+            "type": "object",
+            "description": "Additional metadata for the YouTube upload"
           }
         }
       }
