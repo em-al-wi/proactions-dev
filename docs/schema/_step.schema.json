@@ -840,14 +840,28 @@
             }
           },
           "body": {
-            "type": "object",
             "description": "Request body for POST, PUT, etc.",
-            "additionalProperties": true
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": true
+              },
+              {
+                "type": "string"
+              }
+            ]
           },
           "formData": {
-            "type": "object",
             "description": "Request form data for POST, PUT, etc.",
-            "additionalProperties": true
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": true
+              },
+              {
+                "type": "string"
+              }
+            ]
           },
           "parameters": {
             "type": "object",
