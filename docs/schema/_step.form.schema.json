@@ -116,11 +116,35 @@
           "description": "Placeholder text for input fields"
         },
         "options": {
-          "type": "array",
           "description": "Options for select, radio components",
-          "items": {
-            "type": "string"
-          }
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string",
+                    "description": "The key for the option"
+                  },
+                  "value": {
+                    "type": "string",
+                    "description": "The value for the option"
+                  }
+                },
+                "required": [
+                  "key",
+                  "value"
+                ]
+              }
+            }
+          ]
         },
         "default": {
           "type": [
