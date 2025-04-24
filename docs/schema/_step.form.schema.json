@@ -93,6 +93,9 @@
             "radio",
             "checkbox",
             "date",
+            "datetime",
+            "range",
+            "color",
             "textarea",
             "number",
             "file",
@@ -146,6 +149,10 @@
         "max": {
           "type": "number",
           "description": "Maximum value for number inputs"
+        },
+        "step": {
+          "type": "number",
+          "description": "Step size for the range input"
         },
         "validation": {
           "type": "object",
