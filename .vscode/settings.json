@@ -2,10 +2,10 @@
   "yaml.customTags": ["!include scalar"],
   "yaml.schemas": {
     "docs/schema/ai-kit.schema.json": ["*.ai-kit.yaml"],
-    "docs/schema/_services.schema.json": ["*services.yaml"],
-    "docs/schema/_floatingMenu.schema.json": ["*menu.yaml"],
-    "docs/schema/_templates.schema.json": ["*templates.yaml"],
-    "docs/schema/_section.schema.json": ["*section.yaml"],
-    "docs/schema/_step.schema.json": ["*step.yaml"]
+    "docs/schema/_services.schema.json": ["*.ai-kit.serv.yaml"],
+    "docs/schema/_floatingMenu.schema.json": ["*.ai-kit.menu.yaml"],
+    "docs/schema/_templates.schema.json": ["*.ai-kit.templ.yaml"],
+    "docs/schema/_section.schema.json": ["*.ai-kit.sect.yaml"],
+    "docs/schema/_step.schema.json": ["*.ai-kit.step.yaml"]
   }
 }
