@@ -1,11 +1,23 @@
 {
   "yaml.customTags": ["!include scalar"],
   "yaml.schemas": {
-    "docs/schema/ai-kit.schema.json": ["*.ai-kit.yaml"],
-    "docs/schema/_services.schema.json": ["*.ai-kit.serv.yaml"],
-    "docs/schema/_floatingMenu.schema.json": ["*.ai-kit.menu.yaml"],
-    "docs/schema/_templates.schema.json": ["*.ai-kit.templ.yaml"],
-    "docs/schema/_section.schema.json": ["*.ai-kit.sect.yaml"],
-    "docs/schema/_step.schema.json": ["*.ai-kit.step.yaml"]
+    "https://raw.githubusercontent.com/em-al-wi/proactions-schema/main/schema/ai-kit.schema.json": [
+      "*.ai-kit.yaml"
+    ],
+    "https://raw.githubusercontent.com/em-al-wi/proactions-schema/main/schema/partial-services.schema.json": [
+      "*.ai-kit.serv.yaml"
+    ],
+    "https://raw.githubusercontent.com/em-al-wi/proactions-schema/main/schema/partial-floatingMenu.schema.json": [
+      "*.ai-kit.menu.yaml"
+    ],
+    "https://raw.githubusercontent.com/em-al-wi/proactions-schema/main/schema/partial-templates.schema.json": [
+      "*.ai-kit.templ.yaml"
+    ],
+    "https://raw.githubusercontent.com/em-al-wi/proactions-schema/main/schema/partial-section.schema.json": [
+      "*.ai-kit.sect.yaml"
+    ],
+    "https://raw.githubusercontent.com/em-al-wi/proactions-schema/main/schema/partial-step.schema.json": [
+      "*.ai-kit.step.yaml"
+    ]
   }
 }
