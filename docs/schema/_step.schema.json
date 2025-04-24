@@ -832,6 +832,11 @@
             "description": "Request body for POST, PUT, etc.",
             "additionalProperties": true
           },
+          "formData": {
+            "type": "object",
+            "description": "Request form data for POST, PUT, etc.",
+            "additionalProperties": true
+          },
           "parameters": {
             "type": "object",
             "description": "URL parameters to append to the request",
